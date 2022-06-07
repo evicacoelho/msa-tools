@@ -4,8 +4,13 @@ import random as rd
 import datetime as dtime
 from Bio import AlignIO
 from scipy import spatial
-from functions_sh import *
 from joblib import Parallel, delayed
+# importing files
+import sys
+# insert at 1, 0 is the script path (or '' in REPL)
+sys.path.insert(1, "'calculators")
+
+from functions_sh import *
 
 # USER DEFINED #############################################
 #W = np.loadtxt("wfunc2.dat")
@@ -32,13 +37,12 @@ OFFSET = 23
 theta = 1.0 # Between 0.0 and 1.0
 q = 21
 DI_INC = 0.0
-SYSTEM = 'tat-cxcr'
-os.chdir("/media/earaujo/common/MEGA/data/host-pathogen-PPIN/HIV-Human/")
+SYSTEM = " "
 GENOMES_PATH = "genomes_sh_{}".format(SYSTEM)
 #RESTART = int(np.loadtxt("{}".format(DATA_FILE))[-1, 0])
 RESTART_FILE = "{}/genome.{}.npy".format(GENOMES_PATH, RESTART)
-MSA_TOX = "gp120-edited-60.fasta"
-MSA_NAV = "cd4-edited-60.fasta"
+MSA_TOX = " "
+MSA_NAV = " "
 
 ###########################################################
 
